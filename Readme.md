@@ -1,10 +1,10 @@
 # Mattock
 
-Mattock is a reference implementation of the various file formats of Rocket Universe based mostly on [this documentation](https://www.slideshare.net/rocketsoftware/universe-files)
+Mattock is a read-only implementation of the various file formats of Rocket Universe based mostly on [this documentation](https://www.slideshare.net/rocketsoftware/universe-files)
 
 Project goals:
 - Zero dependencies (except for pytest in dev)
-- All files supported including, Type 1 and Type 19 file support, static hashed files, dynamically hashed files and Btree files
+- Support Type 1 and Type 19 files, static hashed files, dynamically hashed files and Btree files
 
 Non-goals:
 - Random record access for hashed files

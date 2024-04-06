@@ -1,6 +1,6 @@
 # Mattock
 
-Mattock is a reference implementation of the various file formats of Rocket Universe.
+Mattock is a reference implementation of the various file formats of Rocket Universe based mostly on [this documentation](https://www.slideshare.net/rocketsoftware/universe-files)
 
 Project goals:
 - Zero dependencies (except for pytest in dev)

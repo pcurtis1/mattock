@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "mattock"
 version = "2024.1.1"
 dependencies = []
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 authors = [
   {name = "Peter Curtis", email = "pete@petercurtis.id.au"}
 ]

@@ -1,0 +1,20 @@
+[build-system]
+
+[project]
+name = "mattock"
+version = "2024.1.1"
+dependencies = []
+requires-python = ">=3.12"
+authors = [
+  {name = "Peter Curtis", email = "pete@petercurtis.id.au"}
+]
+description = "Offline file reading for Rocket Universe"
+readme = "Readme.md"
+license = {file = "LICENSE"}
+keywords = ["rocket", "universe", "u2"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/pcurtis1/mattock"

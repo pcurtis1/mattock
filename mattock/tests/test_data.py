@@ -268,3 +268,21 @@ test_files:list[Union[NonHashFileSpec,HashFileSpec,DynFileSpec,BtreeFileSpec]] =
 
 test_files_map = dict([(str(f),f) for f in test_files])
 test_files_keys = [k for k in test_files_map]
+
+if __name__ == "__main__":
+    
+    d = dict([
+            (dataset_name, dict([
+                (codecs.decode(k), codecs.encode(v,'base64').decode().strip())
+                for (k, v) in generate_data().items()
+            ]))
+            for (dataset_name, generate_data) in dataset_getters.items()
+        ])
+
+    import json
+    
+    # print(d)
+    
+    print(json.dumps(d,indent=2))
+
+    exit(0)

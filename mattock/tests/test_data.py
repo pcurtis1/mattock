@@ -273,7 +273,7 @@ if __name__ == "__main__":
     
     d = dict([
             (dataset_name, dict([
-                (codecs.decode(k), codecs.encode(v,'base64').decode().strip())
+                (codecs.decode(k), codecs.encode(v,'base64').decode().replace('\n',''))
                 for (k, v) in generate_data().items()
             ]))
             for (dataset_name, generate_data) in dataset_getters.items()

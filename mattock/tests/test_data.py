@@ -144,8 +144,8 @@ def get_test_data():
 
         b"This is a long key with more than 14": b"Long key",
 
-        b"Large record": b"_".join([codecs.encode(str(i))+b": "+(b"U" * 100) for i in range(0,400)]),
-        b"Large record": b"_".join([codecs.encode(str(i))+b": "+(b"U" * 100) for i in range(0,400)]) + b"1", # test padding
+        b"Large recor1": b"_".join([codecs.encode(str(i))+b": "+(b"U" * 100) for i in range(0,400)]),
+        b"Large recor2": b"_".join([codecs.encode(str(i))+b": "+(b"U" * 100) for i in range(0,400)]) + b"1", # test padding
 
         b"Field marks converted": b"Field1\xfeField2",
 
@@ -271,13 +271,13 @@ test_files_keys = [k for k in test_files_map]
 
 if __name__ == "__main__":
     
-    d = dict([
-            (dataset_name, dict([
+    d = [
+            [dataset_name, sorted([
                 (codecs.decode(k), codecs.encode(v,'base64').decode().replace('\n',''))
                 for (k, v) in generate_data().items()
-            ]))
+            ])]
             for (dataset_name, generate_data) in dataset_getters.items()
-        ])
+    ]
 
     import json
     
